@@ -1,38 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Poller+One&display=swap");
+
+:root {
+  --main-color: #222222;
+  --text-color: #f0f0f0;
+  --game-area: white;
+  --correct-color: #93c47d;
+  --hot-color: #ff0000;
+  --warm-color: #ffd966;
+  --cold-color: #9fc5e8;
+}
+
+body {
+  background-color: var(--main-color);
+  color: var(--text-color);
+  font-family: "Poller One", cursive;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.gamearea {
+  position: relative;
+  width: 80%;
+  background-color: var(--text-color);
+  margin: auto;
+  padding: 1rem;
+  padding-bottom: 3rem;
+  color: var(--main-color);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.game-level-heading {
+  color: #000080;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.game-instruction {
+  color: #000080;
+  font-size: 18px;
+  text-align: justify;
+}
+
+.bar-response {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  border: 4px solid black;
+  font-size: 12px;
+  margin: auto;
+  margin-bottom: 1.5rem;
+}
+
+.range-number {
+  padding: 10px;
+}
+
+.correct-bar {
+  padding: 10px;
+  background-color: var(--correct-color);
+  border-left: 4px solid black;
+  border-right: 4px solid black;
+}
+
+.hot-bar {
+  padding: 10px;
+  background-color: var(--hot-color);
+  border-left: 4px solid black;
+  border-right: 4px solid black;
+}
+
+.warm-bar {
+  padding: 10px;
+  background-color: var(--warm-color);
+  border-left: 4px solid black;
+  border-right: 4px solid black;
+}
+
+.cold-bar {
+  padding: 10px;
+  background-color: var(--cold-color);
+  border-left: 4px solid black;
+}
+
+.game-input {
+  /* border: none; */
+  /* border-bottom: 2px solid black; */
+  font-size: 18px;
+  width: 6rem;
+  padding: 6px;
+  margin-right: 5px;
+  font-family: "Poller One", "cursive";
+  background-color: var(--text-color);
+  border-top-left-radius: 1.2rem;
+  border-top-right-radius: 1.2rem;
+  border-bottom-left-radius: 1.2rem;
+  border-bottom-right-radius: 1.2rem;
+  text-align: center;
+}
+
+.game-input:focus {
+  outline: none;
+}
+
+button[type="submit"] {
   color: white;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Poller One", "cursive";
+  background-color: grey;
+  padding: 6px;
+  border-top-left-radius: 1.2rem;
+  border-top-right-radius: 1.2rem;
+  border-bottom-left-radius: 1.2rem;
+  border-bottom-right-radius: 1.2rem;
 }
 
-.App-link {
-  color: #61dafb;
+button[type="submit"]:focus {
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button[type="submit"]:hover {
+  cursor: pointer;
+}
+
+.no-of-chances {
+  color: black;
+  position: absolute;
+  font-size: 1.2rem;
+  bottom: 0px;
+  left: 1rem;
+}
+
+.game-greetings {
+  font-size: 15px;
+  width: 100%;
+  margin: auto;
+  margin-top: 15px;
+  color: black;
+  border-top-left-radius: 1px;
+  margin-bottom: 20px;
+}
+
+.winning-emoji {
+  background-color: var(--correct-color);
+  padding: 4px;
+}
+
+.winning-greeting {
+  background-color: var(--correct-color);
+  padding: 4px;
+}
+
+.alert-box {
+  width: 30%;
+  margin: auto;
+  margin-top: 1.5rem;
+  padding: 10px;
+  font-size: 1.2rem;
+  color: black;
+  font-weight: bold;
+  border-top-left-radius: 1.2rem;
+  border-top-right-radius: 1.2rem;
+  border-bottom-left-radius: 1.2rem;
+  border-bottom-right-radius: 1.2rem;
+}
+
+@media only screen and (min-width: 400px) and (max-width: 600px) {
+  .bar-response {
+    width: 100%;
+    font-size: 12px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .range-number {
+    padding: 5px;
+  }
+
+  .correct-bar {
+    padding: 5px;
+    background-color: var(--correct-color);
+    border-left: 4px solid black;
+    border-right: 4px solid black;
+  }
+
+  .hot-bar {
+    padding: 5px;
+    background-color: var(--hot-color);
+    border-left: 4px solid black;
+    border-right: 4px solid black;
+  }
+
+  .warm-bar {
+    padding: 5px;
+    background-color: var(--warm-color);
+    border-left: 4px solid black;
+    border-right: 4px solid black;
+  }
+
+  .cold-bar {
+    padding: 5px;
+    background-color: var(--cold-color);
+    border-left: 4px solid black;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .gamearea {
+    position: relative;
+    width: 80%;
+    background-color: var(--text-color);
+    margin: auto;
+    padding: 1rem;
+    padding-bottom: 3rem;
+    color: var(--main-color);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .game-level-heading {
+    color: #000080;
+  }
+
+  .game-instruction {
+    color: #000080;
+    font-size: 20px;
+  }
+
+  .bar-response {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 1.5rem;
+    font-size: 18px;
+  }
+
+  .game-input {
+    /* border: none; */
+    /* border-bottom: 2px solid black; */
+    font-size: 18px;
+    width: 6rem;
+    padding: 6px;
+    margin-right: 5px;
+    font-family: "Poller One", "cursive";
+    background-color: var(--text-color);
+    border-top-left-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
+    border-bottom-left-radius: 1.2rem;
+    border-bottom-right-radius: 1.2rem;
+    text-align: center;
+  }
+
+  .game-input:focus {
+    outline: none;
+  }
+
+  button[type="submit"] {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "Poller One", "cursive";
+    background-color: grey;
+    padding: 6px;
+    border-top-left-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
+    border-bottom-left-radius: 1.2rem;
+    border-bottom-right-radius: 1.2rem;
+  }
+
+  button[type="submit"]:focus {
+    outline: none;
+  }
+
+  button[type="submit"]:hover {
+    cursor: pointer;
+  }
+
+  .no-of-chances {
+    color: black;
+    position: absolute;
+    font-size: 1.2rem;
+    bottom: 0px;
+    left: 1rem;
+  }
+
+  .game-greetings {
+    font-size: 20px;
+    width: 80%;
+    margin: auto;
+    margin-top: 15px;
+    color: black;
+    border-top-left-radius: 1px;
+    margin-bottom: 20px;
+  }
+
+  .winning-emoji {
+    background-color: var(--correct-color);
+    padding: 4px;
+  }
+
+  .winning-greeting {
+    background-color: var(--correct-color);
+    padding: 4px;
+  }
+
+  .alert-box {
+    width: 20%;
+    margin: auto;
+    margin-top: 1.5rem;
+    padding: 20px;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: bold;
+    border-top-left-radius: 1.2rem;
+    border-top-right-radius: 1.2rem;
+    border-bottom-left-radius: 1.2rem;
+    border-bottom-right-radius: 1.2rem;
   }
 }

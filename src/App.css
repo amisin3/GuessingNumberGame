@@ -2,7 +2,7 @@
 
 :root {
   --main-color: #222222;
-  --text-color: #f0f0f0;
+  --text-color: #000080;
   --game-area: white;
   --correct-color: #93c47d;
   --hot-color: #ff0000;
@@ -12,7 +12,7 @@
 
 body {
   background-color: var(--main-color);
-  color: var(--text-color);
+  color: var(--game-area);
   font-family: "Poller One", cursive;
 }
 
@@ -23,7 +23,7 @@ body {
 .gamearea {
   position: relative;
   width: 80%;
-  background-color: var(--text-color);
+  background-color: var(--game-area);
   margin: auto;
   padding: 1rem;
   padding-bottom: 3rem;
@@ -33,11 +33,11 @@ body {
 }
 
 .game-level-heading {
-  color: #000080;
+  color: var(--text-color);
 }
 
 .game-instruction {
-  color: #000080;
+  color: var(--text-color);
   font-size: 18px;
   text-align: justify;
 }
@@ -46,7 +46,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  border: 4px solid black;
+  border: 4px solid var(--main-color);
   font-size: 12px;
   margin: auto;
   margin-bottom: 1.5rem;
@@ -59,28 +59,28 @@ body {
 .correct-bar {
   padding: 10px;
   background-color: var(--correct-color);
-  border-left: 4px solid black;
-  border-right: 4px solid black;
+  border-left: 4px solid var(--main-color);
+  border-right: 4px solid var(--main-color);
 }
 
 .hot-bar {
   padding: 10px;
   background-color: var(--hot-color);
-  border-left: 4px solid black;
-  border-right: 4px solid black;
+  border-left: 4px solid var(--main-color);
+  border-right: 4px solid var(--main-color);
 }
 
 .warm-bar {
   padding: 10px;
   background-color: var(--warm-color);
-  border-left: 4px solid black;
-  border-right: 4px solid black;
+  border-left: 4px solid var(--main-color);
+  border-right: 4px solid var(--main-color);
 }
 
 .cold-bar {
   padding: 10px;
   background-color: var(--cold-color);
-  border-left: 4px solid black;
+  border-left: 4px solid var(--main-color);
 }
 
 .game-input {
@@ -91,7 +91,7 @@ body {
   padding: 6px;
   margin-right: 5px;
   font-family: "Poller One", "cursive";
-  background-color: var(--text-color);
+  background-color: var(--game-area);
   border-top-left-radius: 1.2rem;
   border-top-right-radius: 1.2rem;
   border-bottom-left-radius: 1.2rem;
@@ -104,7 +104,7 @@ body {
 }
 
 button[type="submit"] {
-  color: white;
+  color: var(--game-area);
   font-size: 18px;
   font-weight: bold;
   font-family: "Poller One", "cursive";
@@ -125,7 +125,7 @@ button[type="submit"]:hover {
 }
 
 .no-of-chances {
-  color: black;
+  color: var(--main-color);
   position: absolute;
   font-size: 1.2rem;
   bottom: 0px;
@@ -137,7 +137,7 @@ button[type="submit"]:hover {
   width: 100%;
   margin: auto;
   margin-top: 15px;
-  color: black;
+  color: var(--main-color);
   border-top-left-radius: 1px;
   margin-bottom: 20px;
 }
@@ -158,7 +158,7 @@ button[type="submit"]:hover {
   margin-top: 1.5rem;
   padding: 10px;
   font-size: 1.2rem;
-  color: black;
+  color: var(--main-color);
   font-weight: bold;
   border-top-left-radius: 1.2rem;
   border-top-right-radius: 1.2rem;
@@ -179,28 +179,28 @@ button[type="submit"]:hover {
   .correct-bar {
     padding: 5px;
     background-color: var(--correct-color);
-    border-left: 4px solid black;
-    border-right: 4px solid black;
+    border-left: 4px solid var(--main-color);
+    border-right: 4px solid var(--main-color);
   }
 
   .hot-bar {
     padding: 5px;
     background-color: var(--hot-color);
-    border-left: 4px solid black;
-    border-right: 4px solid black;
+    border-left: 4px solid var(--main-color);
+    border-right: 4px solid var(--main-color);
   }
 
   .warm-bar {
     padding: 5px;
     background-color: var(--warm-color);
-    border-left: 4px solid black;
-    border-right: 4px solid black;
+    border-left: 4px solid var(--main-color);
+    border-right: 4px solid var(--main-color);
   }
 
   .cold-bar {
     padding: 5px;
     background-color: var(--cold-color);
-    border-left: 4px solid black;
+    border-left: 4px solid var(--main-color);
   }
 }
 
@@ -208,7 +208,7 @@ button[type="submit"]:hover {
   .gamearea {
     position: relative;
     width: 80%;
-    background-color: var(--text-color);
+    background-color: var(--game-area);
     margin: auto;
     padding: 1rem;
     padding-bottom: 3rem;
@@ -218,11 +218,11 @@ button[type="submit"]:hover {
   }
 
   .game-level-heading {
-    color: #000080;
+    color: var(--text-color);
   }
 
   .game-instruction {
-    color: #000080;
+    color: var(--text-color);
     font-size: 20px;
   }
 
@@ -241,7 +241,7 @@ button[type="submit"]:hover {
     padding: 6px;
     margin-right: 5px;
     font-family: "Poller One", "cursive";
-    background-color: var(--text-color);
+    background-color: var(--game-area);
     border-top-left-radius: 1.2rem;
     border-top-right-radius: 1.2rem;
     border-bottom-left-radius: 1.2rem;
@@ -254,7 +254,7 @@ button[type="submit"]:hover {
   }
 
   button[type="submit"] {
-    color: white;
+    color: var(--game-area);
     font-size: 18px;
     font-weight: bold;
     font-family: "Poller One", "cursive";
@@ -275,7 +275,7 @@ button[type="submit"]:hover {
   }
 
   .no-of-chances {
-    color: black;
+    color: var(--main-color);
     position: absolute;
     font-size: 1.2rem;
     bottom: 0px;
@@ -287,7 +287,7 @@ button[type="submit"]:hover {
     width: 80%;
     margin: auto;
     margin-top: 15px;
-    color: black;
+    color: var(--main-color);
     border-top-left-radius: 1px;
     margin-bottom: 20px;
   }
@@ -308,7 +308,7 @@ button[type="submit"]:hover {
     margin-top: 1.5rem;
     padding: 20px;
     font-size: 1.5rem;
-    color: black;
+    color: var(--main-color);
     font-weight: bold;
     border-top-left-radius: 1.2rem;
     border-top-right-radius: 1.2rem;
